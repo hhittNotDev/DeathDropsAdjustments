@@ -1,0 +1,5 @@
+name: DeathDropsAdjustments
+version: '${project.version}'
+main: dev.goldenedit.deathdropsadjustments.DeathDropsAdjustments
+api-version: '1.20'
+depend: [WorldGuard]

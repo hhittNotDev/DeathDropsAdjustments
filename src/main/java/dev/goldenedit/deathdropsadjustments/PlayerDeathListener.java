@@ -22,7 +22,7 @@ import org.bukkit.scheduler.BukkitTask;
 public class PlayerDeathListener implements Listener {
 
     private JavaPlugin plugin;
-    public static IntegerFlag TOTEM_PICKUP_DELAY_FLAG;
+    public static IntegerFlag NO_TREE_PEARL_FLAG;
 
     public PlayerDeathListener(JavaPlugin plugin) {
         this.plugin = plugin;
@@ -45,8 +45,8 @@ public class PlayerDeathListener implements Listener {
         Integer delay = null; // Initialize delay to null
         ApplicableRegionSet regions = query.getApplicableRegions(weLocation);
         for (ProtectedRegion region : regions) {
-            // Assuming TOTEM_PICKUP_DELAY_FLAG is a static reference to your custom flag
-            Integer value = region.getFlag(DeathDropsAdjustments.TOTEM_PICKUP_DELAY_FLAG);
+            // Assuming NO_TREE_PEARL_FLAG is the custom flag
+            Integer value = region.getFlag(DeathDropsAdjustments.NO_TREE_PEARL_FLAG);
             if (value != null) {
                 delay = value; // Found a valid delay value
                 break; // Exit loop once a value is found
